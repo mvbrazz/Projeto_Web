@@ -1,0 +1,297 @@
+body{
+   background-repeat: no-repeat;
+   background-position: center ;
+   background-size:cover;
+   width:100%;
+   height:100%;
+   background-image:url("background.jpg");
+   margin:0px;
+   background-position: top;
+}
+
+.barra_menu{
+    position: absolute;
+    margin: 0px;
+    background-color:rgb(255, 253, 253);
+    opacity:0.3;
+    height: 60px;
+    width: 100%;
+}
+
+.icon{
+    position:absolute;
+    top: 11px;
+    right: 1410px;
+    height: 26px;
+    width: 95px;
+    color: white;
+    padding-top: 7px;
+    opacity: 1;
+    text-align: center;
+    font-weight:bold;
+}
+
+.microsoft{
+    position:absolute;
+    top: 6px;
+    right: 1310px;
+    height: 0px;
+    width: 175px;
+    color: white;
+    background-color: tomato;
+    font-size: 10px;
+    opacity: 1;
+    text-align: center;
+    font-weight:bold;
+}
+
+.botao_experimente{
+    position:absolute;
+    top: 11px;
+    right: 595px;
+
+    height: 26px;
+    width: 240px;
+    color: white;
+
+
+    padding-top: 7px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    border-radius: 5px;
+
+    text-align: center;
+
+    font-weight:bold;
+}
+
+.botao_entrar{
+    position:absolute;
+    top: 11px;
+    right: 480px;
+    height: 26px;
+    width: 95px;
+
+    color: #0b729b;
+    background-color: white;
+    padding-top: 7px;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 5px;
+    opacity: 1;
+    text-align: center;
+    font-weight:bold;
+}
+
+.Outlook{
+    position: absolute;
+    font-size: 18px;
+    color: white;
+    left: 455px;
+    top: 60px;
+}
+
+.Conecte-se{
+    color: white;
+    position:absolute;
+    height: 60px;
+    width: 900px;
+    left:455px;
+    top: 280px;
+    font-size: 55px;
+
+}
+
+.barra_texto{
+    
+    position:absolute;
+    height: 160px;
+    width: 1535px;
+    background-color: white;
+    bottom: 0px;
+    right: 0px;
+
+}
+
+.texto_email{
+    color: black;
+    position:absolute;
+    height: 60px;
+    width: 550px;
+    top:550px;
+    left:10px;
+    font-size: 10px;
+    font-weight:100;
+
+}
+
+.texto_geral{
+    color: black;
+    position:absolute;
+    height: 60px;
+    width: 550px;
+    top:570px;
+    left:10px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.botao_criar{
+    position:absolute;
+    height: 60px;
+    width: 320px;
+    top: 560px;
+    left:700px;
+    background-color: #0078d4;
+    border-style: solid;
+    border-color: #0078d4;
+    border-width: 2px;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+@media only screen and (max-width:360px){
+
+    body{
+        height:640px;
+    }
+
+    .barra_menu{
+        height: 53px;
+    }
+
+    .icon{
+        position:absolute;
+        top: 11px;
+        left: 4px;
+        height: 26px;
+        width: 50px;
+        color: white;
+        padding-top: 5px;
+        opacity: 1;
+        text-align: center;
+        font-weight:bold;
+    }
+
+    
+    .microsoft{
+        top: 9px;
+        left: 4px;
+        height: 0px;
+        width: 150px;
+        color: white;
+        background-color: tomato;
+        font-size: 8px;
+        opacity: 1;
+        text-align: center;
+        font-weight:bold;
+    }
+
+    .botao_experimente{
+        position:absolute;
+        top: 8px;
+        right: 85px;
+    
+        height: 30px;
+        width: 140px;
+    
+        color: white;
+    
+        padding-top: 5px;
+        padding-right: 10px;
+        padding-left: 5px;
+        border-style: solid;
+        border-color: white;
+        border-width: 1px;
+        border-radius: 2px;
+        font-size: 12px;
+        text-align: left;
+        font-weight:bold;
+    }
+
+    .botao_entrar{
+        position:absolute;
+        top: 8px;
+        right: 23px;
+        height: 20px;
+        width: 50px;
+        font-size: 11px;
+        color: #0b729b;
+        background-color: white;
+        padding-top: 4px;
+        border-style: solid;
+        border-color: white;
+        border-width: 2px;
+        border-radius: 2px;
+        opacity: 1;
+        text-align: center;
+        font-weight:bold;
+    }
+
+    .Outlook{
+        position: absolute;
+        font-size: 12px;
+        color: white;
+        left: 19px;
+    }
+    
+    .Conecte-se{
+        color: white;
+        position:absolute;
+        height: 60px;
+        width: 300px;
+        left: 20px;
+        top: 340px;
+        font-size: 20px;
+    
+    }
+
+    .barra_texto{
+        display: none;
+    }
+
+    .texto_email{
+        color: white;
+        height: 60px;
+        width: 300px;
+        top:180px;
+        left:0px;
+        font-size: 8px;
+        font-weight:100;    
+    }
+
+    .texto_geral{
+        top:160px;
+        display: none;
+    }
+
+    .botao_criar{
+        position:absolute;
+        height: 37px;
+        width: 320px;
+        top: 220px;
+        left:0px;
+        background-color: #0078d4;
+        border-style: solid;
+        border-color: #0078d4;
+        border-width: 2px;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 8px;
+        margin-bottom: 5px;
+    
+    }
+
+    
+
+    
+
+}

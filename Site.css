@@ -1,294 +1,345 @@
 body{
-   background-repeat: no-repeat;
-   background-position: center ;
    background-size:cover;
-   width:100%;
-   height:100%;
+   width:100vw;
+   height:100vh;
    background-image:url("background.jpg");
    margin:0px;
    background-position: top;
 }
 
-.barra_menu{
-    position: absolute;
+ul{
     margin: 0px;
-    background-color:rgb(255, 253, 253);
-    opacity:0.3;
-    height: 60px;
+    padding-left: 0px;
+}
+
+li{
+    margin: 0px;
+    display: inline;
+}
+
+.Centraliza_top{
+    width: 55%;
+    /*height: 100%;*/
+    justify-items: center;
+}
+
+.barra_menu{
+    margin: 0px;
+    background-color:rgb(255, 253, 253,0.3);
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom:  10px;
 }
 
 .icon{
-    position:absolute;
-    top: 11px;
-    right: 1410px;
-    height: 26px;
-    width: 95px;
+    float: left;
+    margin: 0 auto;
     color: white;
-    padding-top: 7px;
-    opacity: 1;
-    text-align: center;
-    font-weight:bold;
+    margin-right: 5px;
 }
 
-.microsoft{
-    position:absolute;
-    top: 6px;
-    right: 1310px;
-    height: 0px;
-    width: 175px;
+.texto_microsoft{
+
+    margin: 0 auto;
+    float: left;
     color: white;
-    background-color: tomato;
-    font-size: 10px;
-    opacity: 1;
+    font-size: 19px;
     text-align: center;
-    font-weight:bold;
 }
+
 
 .botao_experimente{
-    position:absolute;
-    top: 11px;
-    right: 595px;
-
-    height: 26px;
+    display: table;
+    float: left;
+    margin-left: 330px;
     width: 240px;
     color: white;
-
-
-    padding-top: 7px;
+    height: 32px;
     border-style: solid;
     border-color: white;
     border-width: 1px;
     border-radius: 5px;
+}
 
+#experimente{
+    display: table-cell;
     text-align: center;
-
+    font-size: 18px;
     font-weight:bold;
+    vertical-align:middle;
 }
 
 .botao_entrar{
-    position:absolute;
-    top: 11px;
-    right: 480px;
-    height: 26px;
-    width: 95px;
-
+    float:right;
     color: #0b729b;
     background-color: white;
-    padding-top: 7px;
     border-style: solid;
     border-color: white;
-    border-width: 2px;
+    border-width: 1px;
     border-radius: 5px;
     opacity: 1;
+}
+
+#entrar{
+    display: table-cell;
     text-align: center;
+    font-size: 16px;
     font-weight:bold;
+    vertical-align:middle;
+    padding-top:7px;
+    padding-bottom:7px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.Outlook{
-    position: absolute;
-    font-size: 18px;
-    color: white;
-    left: 455px;
-    top: 60px;
+.Centro{
+    margin: 0px;
+    /*background-color:red;*/
+    /*height: 77vh;*/
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.Conecte-se{
-    color: white;
-    position:absolute;
-    height: 60px;
-    width: 900px;
-    left:455px;
-    top: 280px;
-    font-size: 55px;
+.Centraliza_centro{
+    width: 55%;
+    justify-items: center;
+}
 
+#outlook{
+    font-size: 1vw;
+    color: white;
+    margin-top: 5vh;
+    height: 16vh;
+}
+
+#conecte-se{
+    font-size: 3vw;
+    color: white;
 }
 
 .barra_texto{
-    
-    position:absolute;
-    height: 160px;
-    width: 1535px;
+    float: right;
+    height: 19.2vh;
+    width: 80vw;
     background-color: white;
-    bottom: 0px;
-    right: 0px;
 
 }
 
-.texto_email{
-    color: black;
-    position:absolute;
-    height: 60px;
-    width: 550px;
-    top:550px;
-    left:10px;
+.Centraliza_baixo{
+    padding-left: 3vw; /*Modificar*/
+    width: 400px;
+}
+
+#texto_email{
+    color: #333333;
+    width: 350px;
     font-size: 10px;
-    font-weight:100;
-
 }
 
-.texto_geral{
+#texto_geral{
+    float: left;
     color: black;
-    position:absolute;
     height: 60px;
-    width: 550px;
-    top:570px;
-    left:10px;
-    margin-top: 10px;
+    width: 650px;
     font-size: 20px;
 }
 
-.botao_criar{
-    position:absolute;
-    height: 60px;
-    width: 320px;
-    top: 560px;
-    left:700px;
-    background-color: #0078d4;
-    border-style: solid;
-    border-color: #0078d4;
-    border-width: 2px;
-    border-radius: 10px;
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 20px;
+.criar_conta{
 
+    position: absolute;
+    left: 115vh;
+    bottom: 5vh;
+
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    height: 50px;
+    width: 350px;
+    background-color: #0078d4;
+    border-width: 2px;
+    border-radius: 5px;
+    color:white;
+    display: table-cell;
+    text-align: center;
+    font-size: 30px;
+    font-weight:bold;
+    vertical-align:middle;
+    word-spacing: 5px;
 }
+
+
+
 
 @media only screen and (max-width:360px){
 
     body{
-        height:640px;
+        background-repeat: no-repeat;
+    }
+
+    .Centraliza_top{
+        width: 90%;
+        justify-items: center;
     }
 
     .barra_menu{
-        height: 53px;
+        height: 3vh;
+       
     }
 
     .icon{
-        position:absolute;
-        top: 11px;
-        left: 4px;
+        margin-right: 0px;
         height: 26px;
-        width: 50px;
         color: white;
-        padding-top: 5px;
-        opacity: 1;
-        text-align: center;
-        font-weight:bold;
+        margin-right: 5px;
     }
 
+    .texto_microsoft{
+        margin-top: 5px;
+        float: left;
+        color: white;
+        font-size: 13px;
+        text-align: center;
+    }
     
-    .microsoft{
-        top: 9px;
-        left: 4px;
-        height: 0px;
-        width: 150px;
-        color: white;
-        background-color: tomato;
-        font-size: 8px;
-        opacity: 1;
-        text-align: center;
-        font-weight:bold;
-    }
-
     .botao_experimente{
-        position:absolute;
-        top: 8px;
-        right: 85px;
-    
-        height: 30px;
-        width: 140px;
-    
+        display: table;
+        float: left;
+        width: 85px;
         color: white;
-    
-        padding-top: 5px;
-        padding-right: 10px;
-        padding-left: 5px;
+        height: 25px;
+        border-style: solid;
+        border-color: white;
+        border-width: 1px;
+        border-radius: 0px;
+        margin-left: 5px;
+    }
+
+    #experimente{
+        padding: 3px;
+        display: table-cell;
+        text-align:left;
+        font-size: 9px;
+        font-weight:bold;
+        vertical-align:middle;
+    }
+
+    .botao_entrar{
+        float:left;
+        margin-left: 5px;
+        color: #0b729b;
+        background-color: white;
         border-style: solid;
         border-color: white;
         border-width: 1px;
         border-radius: 2px;
-        font-size: 12px;
-        text-align: left;
-        font-weight:bold;
-    }
-
-    .botao_entrar{
-        position:absolute;
-        top: 8px;
-        right: 23px;
-        height: 20px;
-        width: 50px;
-        font-size: 11px;
-        color: #0b729b;
-        background-color: white;
-        padding-top: 4px;
-        border-style: solid;
-        border-color: white;
-        border-width: 2px;
-        border-radius: 2px;
         opacity: 1;
+    }
+
+    #entrar{
+        display: table-cell;
         text-align: center;
+        font-size: 9px;
         font-weight:bold;
+        vertical-align:middle;
+        padding-top:3px;
+        padding-bottom:3px;
+        padding-left: 3px;
+        padding-right: 3px;
     }
 
-    .Outlook{
-        position: absolute;
-        font-size: 12px;
-        color: white;
-        left: 19px;
+    .Centro{
+        margin: 0px;
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
     
-    .Conecte-se{
-        color: white;
-        position:absolute;
-        height: 60px;
-        width: 300px;
-        left: 20px;
-        top: 340px;
-        font-size: 20px;
-    
+    .Centraliza_centro{
+        width: 90%;
+        justify-items: center;
     }
-
+    
+    #outlook{
+        font-size: 2vw;
+        color: white;
+        margin-top: 3vh;
+        height: 16vh;
+        width: 10vw;
+    }
+    
+    #conecte-se{
+        margin-top: 100px;
+        font-size: 3.5vw;
+        color: white;
+        width: 200px;
+        margin-bottom: 0px;
+    }
+    
     .barra_texto{
-        display: none;
+        background-color: transparent;
+        float: left;
+        width: 200px;
+        height: 100px;
     }
-
-    .texto_email{
+    
+    .Centraliza_baixo{
+        padding-left: 5vw; /*Modificar*/
+        width: 200px;
+        height: 200px;
+        margin: 0px;
+    }
+    
+    #texto_email{
         color: white;
-        height: 60px;
-        width: 300px;
-        top:180px;
-        left:0px;
-        font-size: 8px;
-        font-weight:100;    
-    }
+        width: 210px;
+        font-size: 6px;
+        margin-left: 0px;
+        margin-top: 20px;
 
-    .texto_geral{
-        top:160px;
+    }
+    
+    #texto_geral{
         display: none;
     }
-
-    .botao_criar{
-        position:absolute;
-        height: 37px;
-        width: 320px;
-        top: 220px;
-        left:0px;
+    
+    .criar_conta{
+        float: left;
+        position: relative;
+        bottom: 0vh;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        padding-left: 0px;
+        font-size: 13px;
+        height: 25px;
+        width: 210px;
         background-color: #0078d4;
-        border-style: solid;
-        border-color: #0078d4;
         border-width: 2px;
         border-radius: 5px;
-        font-size: 20px;
-        font-weight: bold;
-        text-align: center;
-        padding-top: 8px;
-        margin-bottom: 5px;
-    
+        color:white;
+        left: 0px;
+        word-spacing: 2px;
+        padding-top: 7px;
     }
+
+
+
+    
+
+
+    
+
+    
+
 
     
 

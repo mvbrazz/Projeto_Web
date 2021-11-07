@@ -72,7 +72,7 @@ li{
     font-weight:bold;
     vertical-align:middle;
 }
-
+/*
 .botao_entrar{
     float:right;
     color: #0b729b;
@@ -82,18 +82,20 @@ li{
     border-width: 1px;
     border-radius: 5px;
     opacity: 1;
-}
+}*/
 
 #entrar{
     display: table-cell;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     font-weight:bold;
     vertical-align:middle;
     padding-top:7px;
     padding-bottom:7px;
     padding-left: 20px;
     padding-right: 20px;
+    color: #0b729b;
+    margin-left: 20px;
 }
 
 .Centro{
@@ -150,33 +152,201 @@ li{
     font-size: 20px;
 }
 
-.criar_conta{
+/********************************************************/
 
-    position: absolute;
-    left: 115vh;
-    bottom: 5vh;
+.menu2{
+    display: none;
+    width: 100vw;
+    height: 700px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
-    padding-top: 20px;
-    padding-bottom: 10px;
-    padding-right: 5px;
-    padding-left: 5px;
-    height: 50px;
-    width: 350px;
-    background-color: #0078d4;
-    border-width: 2px;
-    border-radius: 5px;
-    color:white;
-    display: table-cell;
-    text-align: center;
-    font-size: 30px;
-    font-weight:bold;
-    vertical-align:middle;
-    word-spacing: 5px;
 }
 
+.conteudo_login{
+    display: flex;
+    width: 400px;
+    height: 300px;
+    background: #333;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 10px;
+    border-style: solid;
+}
 
+.login_nome{
+    height: 40px;
+    width: 70%;
+    background-color:#333;
+    border-radius:2px;
+    margin-bottom:15px;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+}
 
+.entre{
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Merriweather Sans', sans-serif;
+ }
 
+ .erro_login{
+    display: none;
+    font-style: normal;
+    text-align: center;
+    color: red;
+ }
+
+ input[type="text"]{
+    background-color: #333;
+    cursor: default;
+    appearance: auto;
+    outline: none;
+    box-sizing: border-box;
+    margin: 10px 3px 3px 5px;
+    border: initial;
+    color:white;
+    font-weight: bold;
+    width: 260px;
+ }
+ 
+ input[type="password"]{
+    background-color:#333;
+    cursor: default;
+    appearance: auto;
+    outline: none;
+    box-sizing: border-box;
+    margin: 10px 3px 3px 5px;
+    border: initial;
+    color:#8c8c8c;
+    font-weight: bold;
+    width: 260px;
+ }
+ 
+ .entrar{
+    font-size: 30px;
+    text-align: left;
+    color: white;
+    font-weight: bold;
+ }
+ 
+ .login{
+   height: 40px;
+   width: 100%;
+   background-color:#333;
+   border-radius:2px;
+   margin-bottom:15px;
+ }
+ 
+ .entrar_login{
+   margin-top:10px;
+   height: 40px;
+   width: 150px;
+
+   background-color:red;
+   font-size:20px;
+   color:white;
+ 
+   border-color: white;
+   border-radius:2px;
+   border-width: 2px;
+
+ 
+ }  
+ 
+ input[type="checkbox"]{
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 7px 3px 3px 0px;
+    padding: initial;
+    border: initial;
+    position: relative;
+    right:25px;
+    top: 1px;
+ }
+ 
+ .ajuda{
+  display:inline-block;
+  margin: 7px 0px 3px 30px;
+  font-size:15px;
+ }
+
+.menu3{
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0,0.5);
+}
+
+.header_topo{
+    display: flex;
+    height: 10vh;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Fruktur', cursive;
+    color: white;
+    float: left;
+    margin-left: 7vw;
+}
+
+#Espaço_topo{
+    margin-right: 1vw;
+}
+
+.barra_imagens{
+    display: flex;
+    width: 100%;
+    height:80vh;
+    background-color: transparent;
+    /*justify-content: center;*/
+    flex-direction: column;
+    align-items: center;
+}
+.barra_final{
+    width: 100%;
+    height:10vh;
+}
+
+.pesquisa_opcoes{
+    display: flex;
+    font-size: 14px;
+    font-weight:bold;
+    vertical-align:middle;
+    padding-top:7px;
+    padding-bottom:7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #0b729b;
+    margin-left: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+#lista{
+
+    display: inline;
+}
+
+.dadosHerois{
+    margin-top: 15px;
+    width: 154px;
+    height: 100px;
+    display: inline-block;
+    background-color: white;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+ 
 @media only screen and (max-width:360px){
 
     body{

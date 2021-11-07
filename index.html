@@ -5,48 +5,83 @@
         <meta charset="utf-8"/>
         <meta name="author" content="Marcus Vinicius">
         <link rel="stylesheet" type="text/css" href="Site.css"/>
+        <script src="Site.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
     </head>
     <body>
-        <div class="barra_menu">
-            <div class="Centraliza_top">
-                <ul>
-                    <li><div class="icon"><img src="icon.png"></div></li>
-                    <li><div class="texto_microsoft">Microsoft</div></li>
-                    <li>
-                        <div class="botao_experimente">
-                            <div id="experimente">Experimente o premium</div>
-                        </div>    
-                    </li>
-                    <li><div class="botao_entrar">
-                            <div id="entrar">Entrar</div>
-                        </div>
-                    </li>
-                </ul>
-            </div>        
-        </div> 
-        <div class="Centro">
-            <div class="Centraliza_centro">
-                <div id="outlook"><h1>Outlook</h1></div>
-                <div id="conecte-se"><h1>Conecte-se.<br>Organize-se.<br>Realize-se tarefas.</h1></div>
+        <div class="menu1" id="menu">
+            <div class="barra_menu">
+                <div class="Centraliza_top">
+                    <ul>
+                        <li class="a"><div class="icon"><img src="icon.png"></div></li>
+                        <li class="a"><div class="texto_microsoft">Microsoft</div></li>
+                        <li class="a">
+                            <div class="botao_experimente">
+                                <div id="experimente">Experimente o premium</div>
+                            </div>    
+                        </li>
+                        <li class="a">
+                            <button id="entrar" type="button" onclick="Verifica_Status('menu','menu2','menu3')">Entrar</button>    
+                        </li>
+                    </ul>
+                </div>        
+            </div> 
+            <div class="Centro">
+                <div class="Centraliza_centro">
+                    <div id="outlook"><h1>Outlook</h1></div>
+                    <div id="conecte-se"><h1>Conecte-se.<br>Organize-se.<br>Realize-se tarefas.</h1></div>
+                </div>
+            </div> 
+            <div class="barra_texto">
+                <div class="Centraliza_baixo">
+                    <div id="texto_email"><h1>Email e calendário gratuitos do Outlook</h1></div>
+                    <ul>
+                        <li>
+                            <div id="texto_geral">Tudo o que você precisa para ser mais produtivo
+                                e estar<br>conectado em casa e em praticamente qualquer.
+                            </div>    
+                        </li>
+                        <li>
+                            <div class="criar_conta">Criar conta gratuita</div>   
+                        </li>
+                    </ul>
+                    
+                </div>    
             </div>
         </div> 
-        <div class="barra_texto">
-            <div class="Centraliza_baixo">
-                <div id="texto_email"><h1>Email e calendário gratuitos do Outlook</h1></div>
-                <ul>
-                    <li>
-                        <div id="texto_geral">Tudo o que você precisa para ser mais produtivo
-                            e estar<br>conectado em casa e em praticamente qualquer.
-                        </div>    
-                    </li>
-                    <li>
-                        <div class="criar_conta">Criar conta gratuita</div>   
-                    </li>
-                </ul>
-                  
-            </div>    
+        <div class="menu2" id="menu2">
+            <div class="conteudo_login" id="conteudo_login">   
+                <div class="entre"><p>Entrar</p></div>
+                <div class="login_nome"><input type="text" id="nome" name="login" size="40" minlength="3" placeholder="Email"/></div>
+                <div class="login_nome"><input type="password" id="senha" name="senha" size="40" minlength="3" placeholder="Senha" /></div>
+                <div class="erro_login" id="erro_login">E-mail ou senha incorreta</div>
+                <button class="entrar_login" type="button" onclick="Login('conteudo_login','menu2','menu3','erro_login')">Entrar</button>             
+            </div>
         </div>
+        <div class="menu3" id="menu3">
+            <div class="header_topo">
+                <div id="Espaço_topo"><img src="icone.png"></div>
+                <div id="Espaço_topo"><label>Escolha o atributo primário!</label>
+                    <label>
+                        <input type="radio" name="geral" value="str">Força  
+                    </label>
+                    <label>
+                        <input type="radio" name="geral" value="agi">Agilidade  
+                    </label>
+                    <label>
+                        <input type="radio" name="geral" value="int">inteligência 
+                    </label> 
+                    
+                </div>  
+                <botton class="pesquisa_opcoes" id="botaobusca" type="button" onclick="Pesquisa('menu3','Lista_herois','dadosHerois')">Pesquisar</botton>         
+            </div>
+            <div class="barra_imagens">
+                <ul id="Lista_herois"></ul>
+            </div>
+            <div class="barra_final"></div>
+        </div>      
     </body>
 </html>
 

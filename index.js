@@ -1,5 +1,3 @@
-// module.export  e requare aki e na outra classe
-//const axios = require('axios').default;
 var chave;
 
 function Verifica_Status(menu,menu2,menu3) {
@@ -70,12 +68,6 @@ function Pesquisa(menu3) {
 
    var aux = document.getElementsByName("geral");
    var lista = document.getElementById("Lista_herois");
-/*
-   console.log(aux.value);
-   if(aux.value==null){
-      
-   }*/
-   //else{}
       
    for (var i = 0; i < aux.length; i++) {
       if (aux[i].checked) {

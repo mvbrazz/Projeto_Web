@@ -1,4 +1,5 @@
-
+// module.export  e requare aki e na outra classe
+//const axios = require('axios').default;
 var chave;
 
 function Verifica_Status(menu,menu2,menu3) {
@@ -54,13 +55,14 @@ function logado(menu2,menu3) {
 }
 
 function heroisRetornados(){
-   return axios.get(`https://api.opendota.com/api/heroes`);
+   return axios.get('http://localhost:3000/BuscarTodosHerois');
 }
 
 function Pesquisa(menu3) {
    
    var cont =0;
    var radios;
+   var contaRadio = 0;
    var vetHerois;
    var herois = [];
 
@@ -68,77 +70,126 @@ function Pesquisa(menu3) {
 
    var aux = document.getElementsByName("geral");
    var lista = document.getElementById("Lista_herois");
-
+/*
    console.log(aux.value);
    if(aux.value==null){
       
-   }
-   else{}
+   }*/
+   //else{}
       
-      for (var i = 0; i < aux.length; i++) {
-         if (aux[i].checked) {
-            radios = aux[i].value;
-         }
+   for (var i = 0; i < aux.length; i++) {
+      if (aux[i].checked) {
+         radios = aux[i].value;
+         contaRadio++;
       }
+   }
+   if(contaRadio != 1){
+      alert("Você precisa escolher um atributo!");
+   } 
+   else{  
 
       vetHerois = heroisRetornados();
-
+     
       vetHerois.then(function(resposta){
-        
-      for(i = 0;i<resposta.data.length;i++){
+
+         for(i = 0;i<resposta.data.length;i++){
          
-         if(resposta.data[i].primary_attr == radios){
-
-         var heroi = {};
+            if(resposta.data[i].Atributo_Primario == radios){
+            
+               var heroi = {};
          
-         heroi.nome = resposta.data[i].localized_name;
-         heroi.tipo_ataque = resposta.data[i].attack_type;
-         heroi.atributo_primario = resposta.data[i].primary_attr;
-
-         herois[cont] = heroi;
-
-         cont++;
+               heroi.nome = resposta.data[i].Nome;
+               heroi.tipo_ataque = resposta.data[i].Tipo_Ataque;
+               heroi.atributo_primario = resposta.data[i].Atributo_Primario;
+               herois[cont] = heroi;
+               cont++;
           
-      }
+            }
+  
+         } 
 
+         while(menuHerois.firstChild){
+            menuHerois.removeChild(menuHerois.firstChild);
+         }
 
+         for(i=0;i<herois.length;i++){
+     
+            let help = document.createElement('div');
+            help.style.textAlign = "center";
+            help.style.fontWeight = "bold";
+            help.style.fontSize = "smaller";
+         
+            if(herois[0].atributo_primario == "Agilidade"){
+               help.style.backgroundColor = "green";
+            }
+            else if(herois[0].atributo_primario == "Inteligencia"){
+               help.style.backgroundColor = "skyblue";
+            }
+            else{
+               help.style.backgroundColor = "red";
+            }
+ 
+            var text1 = document.createTextNode(herois[i].nome);
+            help.appendChild(text1);
 
+            help.classList.add('dadosHerois');
 
-      
-   } 
+            lista.appendChild(help);      
 
-   while(menuHerois.firstChild){
-      menuHerois.removeChild(menuHerois.firstChild);
+         }  
+
+      })
+   }    
+ 
+}
+
+function Menu4(menu3,menu4){
+   var display = document.getElementById(menu3).style.display;
+   document.getElementById(menu3).style.display = 'none';
+   document.getElementById(menu4).style.display = 'flex';
+}
+
+function adicionandoHeroi(name,ata,atri){
+   axios.post('http://localhost:3000/AdicionaHerois', {nome: name, ataque: ata, atributo: atri});
+}
+
+function Adiciona(menu4,menu3) {
+
+   var nome = document.querySelector("#nomeHeroi");
+   var display = document.getElementById(menu4).style.display;
+   var display = document.getElementById(menu4).style.display;
+   var radio = 0; 
+
+   if(nome.value.length < 2){
+      alert("Você precisa digitar o nome do Herói!");
    }
+   else{
 
-   for(i=0;i<herois.length;i++){
-
-      let help = document.createElement('div');
-      help.style.textAlign = "center";
-      help.style.fontWeight = "bold";
-      help.style.fontSize = "smaller";
+      var atri = document.getElementsByName("Atributos");
+      var ata = document.getElementsByName("Ataque");
       
-      if(herois[0].atributo_primario == "agi"){
-         help.style.backgroundColor = "green";
+
+      for (var i = 0; i < atri.length; i++) {
+         if (atri[i].checked) {
+            atri = atri[i].value;
+            radio++;
+         }    
+      }  
+      
+      for (var i = 0; i < ata.length; i++) {
+         if (ata[i].checked) {
+            ata = ata[i].value;
+            radio++;
+         }  
       }
-      else if(herois[0].atributo_primario == "int"){
-         help.style.backgroundColor = "skyblue";
+
+      if(radio != 2){
+         alert("Você precisa selecionar os atributos e o tipo de ataque!");
       }
       else{
-         help.style.backgroundColor = "red";
+         adicionandoHeroi(nome.value,ata,atri);
+         document.getElementById(menu4).style.display = 'none';
+         document.getElementById(menu3).style.display = 'block';
       }
- 
-      
-      var text1 = document.createTextNode(herois[i].nome);
-      help.appendChild(text1);
-
-      help.classList.add('dadosHerois');
-
-      lista.appendChild(help);      
-
    }
-
-   })
-       
- 
 }

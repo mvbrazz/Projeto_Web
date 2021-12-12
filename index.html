@@ -5,7 +5,7 @@
         <meta charset="utf-8"/>
         <meta name="author" content="Marcus Vinicius">
         <link rel="stylesheet" type="text/css" href="Site.css"/>
-        <script src="Site.js"></script>
+        <script src="index.js"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
@@ -65,23 +65,62 @@
                 <div id="Espaço_topo"><img src="icone.png"></div>
                 <div id="Espaço_topo"><label>Escolha o atributo primário!</label>
                     <label>
-                        <input type="radio" name="geral" value="str">Força  
+                        <input type="radio" name="geral" value="Forca">Força  
                     </label>
                     <label>
-                        <input type="radio" name="geral" value="agi">Agilidade  
+                        <input type="radio" name="geral" value="Agilidade">Agilidade  
                     </label>
                     <label>
-                        <input type="radio" name="geral" value="int">inteligência 
+                        <input type="radio" name="geral" value="Inteligencia">inteligência 
                     </label> 
                     
                 </div>  
-                <botton class="pesquisa_opcoes" id="botaobusca" type="button" onclick="Pesquisa('menu3','Lista_herois','dadosHerois')">Pesquisar</botton>         
+                <botton class="pesquisa_opcoes" id="botaobusca" type="button" onclick="Pesquisa('menu3','Lista_herois','dadosHerois')">Pesquisar</botton>  
+                <botton class="pesquisa_opcoes" id="botaoAdiciona" type="button" onclick="Menu4('menu3','menu4')">Adiciona</botton>       
             </div>
             <div class="barra_imagens">
                 <ul id="Lista_herois"></ul>
             </div>
             <div class="barra_final"></div>
-        </div>      
+        </div> 
+        <div class="menu4" id="menu4">
+
+            <div class="conteudo_registro" id="conteudo_registro">   
+                <div class="entre"><p>Adicionando Herói</p></div>
+                <div class="login_nome"><input type="text" id="nomeHeroi" name="nomeHeroi" size="40" minlength="3" placeholder="Nome do herói"/></div>
+                
+                <div id="Espaço_topo"><label></label>
+                    <label>
+                        <input type="radio" name="Atributos" value="Forca">Força  
+                    </label>
+                    <label>
+                        <input type="radio" name="Atributos" value="Agilidade">Agilidade  
+                    </label>
+                    <label>
+                        <input type="radio" name="Atributos" value="Inteligencia">inteligência 
+                    </label> 
+                    
+                </div>  
+
+                <div id="Espaço_topo"><label></label>
+                    <label>
+                        <input type="radio" name="Ataque" value="Melee">Melee  
+                    </label>
+                    <label>
+                        <input type="radio" name="Ataque" value="Ranged">Ranged 
+                    </label> 
+                    
+                </div>  
+                
+                <button class="entrar_login" type="button" onclick="Adiciona('menu4','menu3')">Adicionar</button>             
+            </div>
+            </div>
+
+
+            
+        </div> 
+
+        </div>     
     </body>
 </html>
 
